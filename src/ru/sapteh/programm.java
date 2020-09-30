@@ -1,10 +1,4 @@
 package ru.sapteh;
-
-<<<<<<< HEAD
-public class programm {
-    public static void main(String[] args) {
-        System.out.println("hellow world");
-=======
 import java.util.Scanner;
 
 public class programm {
@@ -46,7 +40,6 @@ public class programm {
 
 
         return "";
->>>>>>> 0f34933... create class
     }
 
 }
