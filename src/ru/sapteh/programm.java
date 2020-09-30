@@ -1,8 +1,14 @@
 package ru.sapteh;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class programm {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        File persDir = new File("c:/java_42/persons");
+        persDir.mkdir();
         var scan = new Scanner(System.in);
         System.out.println("введите имя");
         String name = scan.nextLine();
@@ -19,8 +25,9 @@ public class programm {
             System.out.println(personIsEmpti(person));
         }
 
+
     }
-    public static String personIsEmpti (Person person){
+    public static String personIsEmpti (Person person) throws IOException{
         String err="";
             if (person.getName()==""){
                 err += "имени нету ";
@@ -30,7 +37,14 @@ public class programm {
                 err+="даты нету ";
             }
             if (err.equals("")){
+                File pers = new File("c:/java_42/persons/"+person.getName()+".txt");
+                pers.createNewFile();
+                FileWriter n= new FileWriter(pers);
+                n.write(person.toString());
+                n.close();
             return err;}
+
+
         return "";
     }
 
