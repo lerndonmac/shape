@@ -18,6 +18,7 @@ public class programm {
         } else {
             System.out.println(personIsEmpti(person));
         }
+
     }
     public static String personIsEmpti (Person person){
         String err="";
