@@ -31,6 +31,5 @@ public class Trigle extends Shape {
         return "цвет: "+super.getColor()+"\n"+
                 "координаты: "+super.getX()+","+super.getY()+"\n"+
                 "площадь: "+area();
-
     }
 }
